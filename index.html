@@ -1,0 +1,438 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Club Wheaton</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+<link rel="shortcut icon" href="https://www.ffwd.org/wp-content/uploads/12391785_1077834235600931_1299484106104597636_n.png" />
+    <script src="https://unpkg.com/wavesurfer.js@3.0.0/dist/wavesurfer.min.js"></script>
+
+  <style>
+      #grad {
+      height: auto;
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to bottom right, red, yellow); /* Standard syntax (must be last) */
+      background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+      }
+
+html { 
+  
+
+}
+
+
+
+
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+      .menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  font-size: 200px;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: rgba(10, 10, 10, 0.5);
+  position: relative;
+}
+
+.menu-hover-lines li:first-child a {
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+
+
+  content: '';
+  transition: all 0.35s ease;
+  background-color: black; /*change this value for navigation color*/
+  width: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: black; /*change this to change font color*/
+  transition: all 0.35s ease;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+
+.element::-webkit-scrollbar { width: 0 !important }
+
+
+
+.image1 {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.button-rounded-hover {
+  border: 0;
+  border-radius: 5000px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #115b8d;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: #115b8d;
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 0.25;
+}
+
+
+
+
+
+
+.collapsible {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: transparent;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  border: ;
+  width: 90%;
+  margin: auto;
+}
+  </style>
+  </head>
+
+
+  <body>
+
+<div id="grad">
+<br>
+
+<div class="container" style="width: 90%;">
+    <div style="padding-left: 5%; padding-right: 5%;">
+    <ul class="menu menu-hover-lines" style="">
+      <a>
+          <div class="word" style="font-size: 75px; font-weight: 600;  margin: auto; color: white; ">
+          Welcome to Hack Club!
+          </div>
+      </a>
+    </ul>
+  </div>
+</div>
+<hr>
+
+<div style="width: 90%; margin: auto;">
+<div id="waveform" style="width: 90%; margin: auto;"></div>
+
+
+<center>
+<button class="btn btn-primary" onclick="wavesurfer.playPause()">
+      <i class="fa fa-play"></i>
+
+<!-- use a tag for links to other locations -->
+<a class="button button-rounded-hover">Play/Pause</a>
+   </button>
+</center>
+</div>
+<!-- use button tag for on page actions -->
+<hr>
+
+<div class="leftside" style="">
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<div class="word" style="font-size: 60px; font-weight: 600; ">
+About Hack Club
+</div>
+</a></li>
+</ul>
+  </div>
+</div>
+</button>
+<div class="content">
+  <p>
+    <h3>
+      <div style="width: 50%; float: left; padding-right: 20px;">
+<img class="mySlides w3-animate-top" src="1.jpg" style="width:100%">
+          <img class="mySlides w3-animate-bottom" src="2.jpg" style="width:100%">
+          <img class="mySlides w3-animate-top" src="3.jpeg" style="width:100%">
+</div>
+Wheaton Hack Club is our local chapter sponsored by the original group based in California. Hack Club is a global network designed for programming clubs like us. Hack Club is student run. In other words: NO teachers and lectures! Hack Club is intended to be a supportive community for all members! Throughout the year, we will be completing awesome projects, learning programming languages, advancing previously acquired skills, and competing at hackathons. There is more to Hack Club then just our club meetings. Experience is not necessary for success. There is always something new to learn!
+<br>
+<br>
+Follow us on Instagram: <a href="https://www.instagram.com/hackclubwheaton/" target="blank">@hackclubwheaton</a>
+</h3>
+  </p>
+  <hr>
+</div>
+
+<br>
+
+<button class="collapsible">
+<div class="container">
+<div style=" ">
+<ul class="menu menu-hover-lines">
+<li><a>
+<div class="word" style="font-size: 60px; color: rgb(220,220,220,0.5);">
+Join Discord 
+</div>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p><h3>Our discord is a great way to contact club leaders, talk with other members, and stay connected about future event and meeting dates!
+<br>
+<br>
+
+Link: <a href="https://discord.gg/68dTArJ" target="blank">https://discord.gg/68dTArJ</a>
+ <hr>
+ </h3>
+  </p>
+</div>
+
+
+<br>
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<div class="word" style="font-size: 60px; font-weight: 600; ">
+First Meeting 
+</div>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p>
+<h3>
+Out first meeting is Friday, September 13th! It is after school in room 3711. We'll provide food and drinks as you learn what Hack Club is all about. Collect some tuff stickers! Bring your laptop if you have one because we will be doing an awesome activity!!! (If you don't have one, no worries, we will have extra laptops.)
+<hr>
+
+</h3>
+  </p>
+</div>
+
+<br>
+
+<button class="collapsible">
+<div class="container">
+ <div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<div class="word" style="font-size: 60px; color: rgb(220,220,220,0.5);">
+Our Leaders 
+</div>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p>
+    <h3>
+<strong>President: </strong> Gandhar V.
+<br>
+<strong>VP of Communications: </strong>Anthony H.
+<br>
+<strong>VP of Treasury: </strong>Simon N. 
+<br>
+<strong>VP: </strong>Tsegazeab B.
+<br>
+<strong>VP: </strong>Yeabsira M. 
+<hr>
+</h3>
+  </p>
+</div>
+
+
+
+<br>
+
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<div class="word" style="font-size: 60px; font-weight: 600; ">
+Contact info 
+</div>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p>
+    <h3>
+<strong>Gandhar:</strong> email- gandhar.viragi@gmail.com, Instagram- <a href="https://www.instagram.com/gunny.jaunt/" target="blank">@gunny.jaunt</a>
+<br>
+<strong>Anthony:</strong> email- anthony.b.huynh@gmail.com, Instagram- <a href="https://www.instagram.com/antwon._07/" target="blank">@antwon._07</a>
+<br>
+<strong>Simon:</strong> email- simonhknguyen@gmail.com, Instagram- <a href="https://www.instagram.com/simysimon/" target="blank">@simysimon</a>
+<br>
+<strong>Tsegazeab:</strong> email- tsegazeab12@gmail.com, Instagram- <a href="https://www.instagram.com/tsegaz.on.ig/" target="blank">@tsegaz.on.ig</a>
+<br>
+<strong>Yeabsira:</strong> email- , Instagram- <a href="https://www.instagram.com/yeab.mxj/" target="blank">@yeab.mxj</a>
+<hr>
+
+    </h3>
+  </p>
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+</script>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
